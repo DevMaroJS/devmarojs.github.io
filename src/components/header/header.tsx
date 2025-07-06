@@ -6,7 +6,7 @@ export const Header = () => {
   const isContactPage = location.pathname === "/contact";
 
   return (
-    <StyledHeader isContactPage={isContactPage}>
+    <StyledHeader $isContactPage={isContactPage}>
       {isContactPage && <a href="/">{`< GO BACK`}</a>}
       {!isContactPage && <a href="/contact">{`CONTACT ME`}</a>}
     </StyledHeader>

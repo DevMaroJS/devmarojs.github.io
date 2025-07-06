@@ -16,11 +16,12 @@
     justify-content: center;
     gap: 32px;
 
-    hr {
+    .line {
       border: 1px solid var(--primary-color);
       height: 10px;
       box-shadow: 0px 0px 4px 1px rgb(137 81 255 / 70%);
       margin: 0px;
+      width: 100%;
     }
 
     p,

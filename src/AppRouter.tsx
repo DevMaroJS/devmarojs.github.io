@@ -9,11 +9,9 @@ function AppRouter() {
         element={
           <div className="main-container">
             <div className="main-container__title">
-              <p>
-                <hr />
-                Hello there!
-                <hr />
-              </p>
+            <div className="line"/>
+              <p> Hello there! </p>
+              <div className="line"/>
               <span>I am Yldemaro</span>
             </div>
             <span className="main-container__description">
