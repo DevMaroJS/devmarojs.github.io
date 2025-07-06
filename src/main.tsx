@@ -10,7 +10,7 @@ import ReactDOM from "react-dom/client";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(AppRouter()), 
-  { basename: import.meta.env.DEV ? './' : '/personal-portfolio/' }
+  { basename: import.meta.env.DEV ? './' : './personal-portfolio/' }
 );
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
