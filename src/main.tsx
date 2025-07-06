@@ -8,7 +8,10 @@ import {
 } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 
-const routes = createBrowserRouter(createRoutesFromElements(AppRouter()));
+const routes = createBrowserRouter(
+  createRoutesFromElements(AppRouter()), 
+  { basename: import.meta.env.DEV ? '/' : '/personal-portfolio/' }
+);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
