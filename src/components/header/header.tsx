@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { StyledHeader } from "./header.styled";
 
 export const Header = () => {
@@ -7,8 +7,8 @@ export const Header = () => {
 
   return (
     <StyledHeader $isContactPage={isContactPage}>
-      {isContactPage && <a href="/">{`< GO BACK`}</a>}
-      {!isContactPage && <a href="./contact">{`CONTACT ME`}</a>}
+      {isContactPage && <Link  to="/">{`< GO BACK`}</Link >}
+      {!isContactPage && <Link  to="/contact">{`CONTACT ME`}</Link >}
     </StyledHeader>
   );
 };
