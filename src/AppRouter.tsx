@@ -1,12 +1,11 @@
 import { Route } from "react-router-dom";
 import App from "./App";
-import { ROOT } from "./main";
 
 function AppRouter() {
   return (
     <Route element={<App />}>
       <Route
-        path={ROOT}
+        path="/"
         element={
           <div className="main-container">
             <div className="main-container__title">
@@ -22,7 +21,7 @@ function AppRouter() {
         }
       />
       <Route
-        path={`${ROOT}contact`}
+        path="/contact"
         element={
           <div className="main-container">
             <div className="main-container__title">
