@@ -32,8 +32,11 @@ export const Header = () => {
         </span>
       </div>
       <Link to="/" className="logo">
-        {/* <img src="/logo.png" alt="Logo" /> */}
-        <span>Yldemaro</span>
+        <code>
+          {`<`}
+          <span>DevMaroJS</span>
+          {`/>`}
+        </code>
       </Link>
       <nav>
         <ul>

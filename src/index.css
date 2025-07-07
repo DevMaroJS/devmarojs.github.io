@@ -18,7 +18,9 @@
   --primary-color: #673398;
   --background-color: #282c33;
   --gray: #abb2bf;
+  --gray-2: #abb2bf9e;
   --white: #ffffff;
+  --black: #000000;
 }
 
 a {

@@ -42,7 +42,21 @@ export const StyledHeader = styled.header`
   .logo {
     display: flex;
     align-items: center;  
-    padding: 0px 48px;  
+    padding: 0px 48px; 
+    
+    code{
+      font-size: x-large;
+      color: var(--gray);
+      font-weight: bolder;
+
+      span{
+        color: var(--primary-color);
+      }
+
+      span:hover{
+        background-color: var(--gray-2);
+      }
+    }
   }
   
   nav{
