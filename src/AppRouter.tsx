@@ -1,5 +1,5 @@
-import { Route } from "react-router-dom";
-import App from "./App";
+import { Route } from 'react-router-dom';
+import App from './App';
 
 function AppRouter() {
   return (
@@ -9,9 +9,9 @@ function AppRouter() {
         element={
           <div className="main-container">
             <div className="main-container__title">
-            <div className="line"/>
+              <div className="line" />
               <p> Hello there! </p>
-              <div className="line"/>
+              <div className="line" />
               <span>I am Yldemaro</span>
             </div>
             <span className="main-container__description">
@@ -25,11 +25,7 @@ function AppRouter() {
         element={
           <div className="main-container">
             <div className="main-container__title">
-              <p>
-                <hr />
-                Contact me
-                <hr />
-              </p>
+              <p>Contact me</p>
             </div>
             <span className="main-container__description">
               🚧 UNDER CONSTRUCTION 🚧

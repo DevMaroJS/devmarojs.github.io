@@ -1,14 +1,33 @@
-import { Link, useLocation } from "react-router-dom";
-import { StyledHeader } from "./header.styled";
+import { Link } from 'react-router-dom';
+import { StyledHeader, StyledNavLink } from './header.styled';
 
 export const Header = () => {
-  const location = useLocation();
-  const isContactPage = location.pathname === "/contact";
-
   return (
-    <StyledHeader $isContactPage={isContactPage}>
-      {isContactPage && <Link  to="/">{`< GO BACK`}</Link >}
-      {!isContactPage && <Link  to="/contact">{`CONTACT ME`}</Link >}
+    <StyledHeader>
+      <Link to="/" className="logo">
+        <img src="/logo.png" alt="Logo" />
+      </Link>
+      <nav>
+        <ul>
+          <li>
+            <StyledNavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              home
+            </StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to="/projects">projects</StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to="/about-me">about-me</StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to="/contact">contact</StyledNavLink>
+          </li>
+        </ul>
+      </nav>
     </StyledHeader>
   );
 };
