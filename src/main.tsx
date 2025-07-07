@@ -1,23 +1,18 @@
 import { StrictMode } from "react";
-import AppRouter from "./AppRouter";
-import "./index.css";
+import ReactDOM from "react-dom/client";
 import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import ReactDOM from "react-dom/client";
+import AppRouter from "./AppRouter";
+import "./index.css";
 
-export const ROOT = import.meta.env.DEV ? '/' : '/personal-portfolio/'
 
-const routes = createBrowserRouter(
-  createRoutesFromElements(AppRouter()), 
-  { basename: ROOT }
-);
-
+const routes = createBrowserRouter(createRoutesFromElements(AppRouter()));
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={routes} />
-  </StrictMode>,
+  </StrictMode>
 );

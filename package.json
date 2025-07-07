@@ -1,9 +1,9 @@
 {
-  "name": "personal-portfolio",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://devmarojs.github.io/personal-portfolio",
+  "homepage": "https://devmarojs.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
