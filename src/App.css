@@ -9,4 +9,15 @@
   flex-direction: column;
   align-items: center;
   gap: 112px;
+
+  .main-container__title {
+    line-height: 1.1;
+    font-weight: 600;
+    color: var(--white);
+    padding: 0px 62px;
+
+    span {
+      color: var(--primary-color);
+    }
+  }
 }

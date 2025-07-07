@@ -9,10 +9,13 @@ function AppRouter() {
         element={
           <div className="main-container">
             <div className="main-container__title">
-              <div className="line" />
-              <p> Hello there! </p>
-              <div className="line" />
-              <span>I am Yldemaro</span>
+              <h1>
+                Hello there<span>!</span>
+              </h1>
+              <h1>
+                This is <span>Yldemaro</span>, I am a <span>full-stack</span>{' '}
+                developer.
+              </h1>
             </div>
             <span className="main-container__description">
               🚧 UNDER CONSTRUCTION 🚧
@@ -20,7 +23,7 @@ function AppRouter() {
           </div>
         }
       />
-      <Route
+      {/* <Route
         path="/contact"
         element={
           <div className="main-container">
@@ -32,8 +35,8 @@ function AppRouter() {
             </span>
           </div>
         }
-      />
-      <Route path="*" element={<div>Not Found</div>} />
+      /> */}
+      <Route path="*" element={<div>🚧 UNDER CONSTRUCTION 🚧</div>} />
     </Route>
   );
 }
