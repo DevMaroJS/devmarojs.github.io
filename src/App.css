@@ -3,12 +3,12 @@
 }
 
 .main-container {
-  margin-top: 60px;
+  margin-top: 62px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 112px;
+  gap: 90px;
 
   .main-container__title {
     line-height: 1.1;

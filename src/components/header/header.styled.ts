@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   z-index: 2;
-  padding: 32px 0px 8px 0px;
+  padding: 16px 0px;
   background-color: var(--background-color);
 
   .media-header {
