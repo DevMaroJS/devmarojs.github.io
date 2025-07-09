@@ -4,15 +4,16 @@ import EmailIcon from '../../assets/email.svg';
 
 export const media = [
   {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/yldemaro-romero/',
+    name: 'GitHub',
+    url: 'https://github.com/DevMaroJS',
     icon: GithubIcon
   },
   {
-    name: 'GitHub',
-    url: 'https://github.com/DevMaroJS',
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/yldemaro-romero/',
     icon: LinkedinIcon
   },
+
   {
     name: 'Email',
     url: 'mailto:yldemaro.1994@gmail.com',
