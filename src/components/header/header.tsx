@@ -38,6 +38,7 @@ export const Header: React.FC = () => {
               <li key={index}>
                 <StyledNavLink
                   to={item.route}
+                  onClick={handleToggleMenu}
                   className={({ isActive }) => (isActive ? 'active' : '')}
                 >
                   {item.name}
