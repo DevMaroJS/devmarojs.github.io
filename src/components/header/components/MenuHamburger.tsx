@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoint } from '../../../utils/theme';
 
 const StyledMenuHamburger = styled.button`
   display: flex;
@@ -8,6 +9,8 @@ const StyledMenuHamburger = styled.button`
   padding: 0px;
   width: 35px;
   height: 35px;
+  border: 0px;
+  background: transparent;
 
   span {
     display: block;
@@ -134,7 +137,7 @@ const StyledMenuHamburger = styled.button`
     }
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: ${breakpoint.medium}px) {
     display: none;
   }
 `;

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { breakpoint } from '../../utils/theme';
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -9,32 +10,25 @@ export const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   z-index: 2;
-  padding: 16px 0px;
+  padding: 1rem 0;
   background-color: var(--background-color);
 
   .media-header {
-    position: fixed;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    left: 16px;
-    gap: 8px;
-    top: 0px;
-    z-index: 1;
 
     .media-header__line {
-      width: 1px;
-      height: 33vh;
-      background-color: var(--gray);
-      display: block;
+      display: none;
     }
 
     .media-links {
-      display: grid;
-      grid-auto-columns: 1fr;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      padding: 1rem;
 
-      .media-link:hover > svg {
+      .media-link svg:hover {
+        transform: scale(1.1);
         filter: brightness(0) invert(1);
       }
     }
@@ -43,7 +37,7 @@ export const StyledHeader = styled.header`
   .logo {
     display: flex;
     align-items: center;
-    padding: 0px 48px;
+    padding: 0 3rem;
 
     code {
       font-size: x-large;
@@ -62,43 +56,77 @@ export const StyledHeader = styled.header`
 
   nav {
     display: block;
-    padding: 0px 16px;
+    padding: 0 1rem;
 
     ul {
       display: flex;
-      gap: 32px;
+      gap: 2rem;
       list-style: none;
+      flex-direction: column;
+      padding-left: 3.125rem;
     }
   }
 
   .menu {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
     height: 0;
     left: 0;
     background: var(--background-color);
     margin: 0;
     width: 100%;
-    padding-left: 50px;
-    transition-property: height;
-    transition-duration: 1.5s; /* different durations for each property */
+    transition: all 1.5s ease;
     overflow: hidden;
     position: fixed;
+    justify-content: space-between;
+    padding: 0;
   }
 
   .menu.active {
-    height: 100vh;
+    height: calc(100vh - 50px);
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: ${breakpoint.medium}px) {
+    .media-header {
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      left: 1rem;
+      gap: 0.5rem;
+      top: 0;
+      z-index: 1;
+
+      .media-header__line {
+        display: block;
+        width: 1px;
+        height: 25rem;
+        background-color: var(--gray);
+      }
+
+      .media-links {
+        display: grid;
+        grid-auto-columns: 1fr;
+        padding: 0;
+      }
+    }
+
+    nav ul {
+      flex-direction: row;
+    }
+
     .menu {
       position: relative;
       height: auto;
       padding-left: 0;
-      display: flex;
       flex-direction: row;
-      gap: 32px;
+      gap: 2rem;
+    }
+
+    .menu.active {
+      height: initial;
+      justify-content: initial;
     }
   }
 `;

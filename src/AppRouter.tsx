@@ -36,7 +36,14 @@ function AppRouter() {
           </div>
         }
       /> */}
-      <Route path="*" element={<div>🚧 UNDER CONSTRUCTION 🚧</div>} />
+      <Route
+        path="*"
+        element={
+          <div className="main-container__empty-page">
+            🚧 UNDER CONSTRUCTION 🚧
+          </div>
+        }
+      />
     </Route>
   );
 }
