@@ -1,6 +1,6 @@
-import GithubIcon from '../../assets/github.svg';
-import LinkedinIcon from '../../assets/linkedin.svg';
-import EmailIcon from '../../assets/email.svg';
+import GithubIcon from '@assets/github.svg';
+import LinkedinIcon from '@assets/linkedin.svg';
+import EmailIcon from '@assets/email.svg';
 
 export const media = [
   {

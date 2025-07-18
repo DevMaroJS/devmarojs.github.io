@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { StyledHeader, StyledNavLink } from './header.styled';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { media, menuOptions } from './constants';
 import { MenuHamburger } from './components/MenuHamburger';
+import { StyledHeader, StyledNavLink } from './Header.styled';
 
 export const Header: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState('');

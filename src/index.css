@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
 
 :root {
+  --primary-color: #673398;
+  --background-color: #282c33;
+  --gray: #abb2bf;
+  --gray-2: #abb2bf9e;
+  --white: #ffffff;
+  --black: #000000;
+  --black-2: #242424;
+
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'Fira Code', monospace;
   line-height: 1.5;
@@ -8,25 +16,22 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--black-2);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --primary-color: #673398;
-  --background-color: #282c33;
-  --gray: #abb2bf;
-  --gray-2: #abb2bf9e;
-  --white: #ffffff;
-  --black: #000000;
 }
 
 a {
   font-weight: 500;
   color: #fff;
   text-decoration: inherit;
+}
+
+button {
+  font-family: 'Fira Code', monospace;
 }
 
 a:hover {

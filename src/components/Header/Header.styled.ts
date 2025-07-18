@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import { breakpoint } from '@utils';
 import styled from 'styled-components';
-import { breakpoint } from '../../utils/theme';
+import { NavLink } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
   display: flex;

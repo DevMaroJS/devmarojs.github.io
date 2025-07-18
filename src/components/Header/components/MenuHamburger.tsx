@@ -1,5 +1,5 @@
+import { breakpoint } from '@utils';
 import styled from 'styled-components';
-import { breakpoint } from '../../../utils/theme';
 
 const StyledMenuHamburger = styled.button`
   display: flex;
