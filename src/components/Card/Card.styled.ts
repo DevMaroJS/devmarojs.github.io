@@ -1,3 +1,4 @@
+import { breakpoint } from "@utils";
 import styled from "styled-components";
 
 export const StyledCard = styled.div<{
@@ -7,9 +8,13 @@ export const StyledCard = styled.div<{
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: ${({ width }) => width || 'auto'};
+  width: 100%;
   height: ${({ height }) => height || 'auto'};
   border: 1px solid var(--gray);
   padding: 0.2rem;
-  color: var(--gray-2)
+  color: var(--gray-2);
+
+  @media only screen and (min-width: ${breakpoint.medium}px) {
+    width: ${({ width }) => width || 'auto'};
+  }
 `

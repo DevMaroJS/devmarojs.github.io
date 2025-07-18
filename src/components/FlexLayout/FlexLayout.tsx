@@ -12,14 +12,16 @@ interface Props {
 
 export const FlexLayout = styled.div<Props>`
   display: flex;
-  flex-direction: ${({ direction }) => direction};
+  flex-direction: column;
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
   min-height: ${({ minHeight }) => minHeight || 'calc(100vh - 67px)'};
-  padding: ${({ padding }) => padding || '0 5rem'};
+  padding: ${({ padding }) => padding || '0 2rem'};
   gap: ${({ gap }) => gap || '0'};
 
   @media only screen and (min-width: ${breakpoint.medium}px) {
     min-height: ${({ minHeight }) => minHeight || 'calc(100vh - 88px)'};
+    flex-direction: ${({ direction }) => direction};
+    padding: ${({ padding }) => padding || '0 5rem'};
   }
 `;
