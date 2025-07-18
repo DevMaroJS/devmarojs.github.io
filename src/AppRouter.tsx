@@ -1,28 +1,11 @@
 import { Route } from 'react-router-dom';
 import App from './App';
+import { Home } from './pages';
 
 function AppRouter() {
   return (
     <Route element={<App />}>
-      <Route
-        path="/"
-        element={
-          <div className="main-container">
-            <div className="main-container__title">
-              <h1>
-                Hello there<span>!</span>
-              </h1>
-              <h1>
-                This is <span>Yldemaro</span>, I am a <span>full-stack</span>{' '}
-                developer.
-              </h1>
-            </div>
-            <span className="main-container__description">
-              🚧 UNDER CONSTRUCTION 🚧
-            </span>
-          </div>
-        }
-      />
+      <Route path="/" element={<Home />} />
       {/* <Route
         path="/contact"
         element={
