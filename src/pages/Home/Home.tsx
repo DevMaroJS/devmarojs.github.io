@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { Card, FlexLayout } from '@components';
+import { Button, Card, FlexLayout } from '@components';
 import { ColorZone, StyledHome } from './Home.styled';
 
 export const Home: React.FC = () => {
@@ -14,7 +13,7 @@ export const Home: React.FC = () => {
       >
         <div className="title-container">
           <h1>
-            This is <ColorZone>Yldemaro</ColorZone>, <br />I am a{' '}
+            This is <ColorZone>Yldemaro</ColorZone>, <br />A{' '}
             <ColorZone>full-stack</ColorZone> developer.
           </h1>
           <p className="description">
@@ -23,7 +22,9 @@ export const Home: React.FC = () => {
             facere neque voluptate numquam ut odio praesentium eveniet, officia
             voluptatum nulla non.
           </p>
-          <button>Contact me!!</button>
+          <Button variant="primary" link="/contact">
+            Contact me!!
+          </Button>
         </div>
         <div className="currently-container">
           <img src="" alt="" />
@@ -33,16 +34,21 @@ export const Home: React.FC = () => {
           </Card>
         </div>
       </FlexLayout>
-      <FlexLayout
-        direction="row"
+      {/* <FlexLayout
+        direction="column"
+        justifyContent="space-around"
         minHeight="auto"
-        justifyContent="center"
-        padding="3rem 0"
+        alignItems="end"
+        padding="3rem 5rem"
       >
-        <span>With great power comes great responsibility</span>
-        <span>- Uncle Ben</span>
-      </FlexLayout>
-      <div>
+        <Card>
+          <span>With great power comes great responsibility</span>
+        </Card>
+        <Card>
+          <span>- Uncle Ben</span>
+        </Card>
+      </FlexLayout> */}
+      {/* <div>
         <div>
           <h2>#projects</h2>
           <Link to="/projects">view all </Link>
@@ -57,7 +63,7 @@ export const Home: React.FC = () => {
         </div>
       </div>
       <div>#about-me</div>
-      <div>#contacts</div>
+      <div>#contacts</div> */}
     </StyledHome>
   );
 };

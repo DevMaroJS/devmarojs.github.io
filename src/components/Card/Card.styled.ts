@@ -10,8 +10,8 @@ export const StyledCard = styled.div<{
   gap: 0.5rem;
   width: 100%;
   height: ${({ height }) => height || 'auto'};
-  border: 1px solid var(--gray);
-  padding: 0.2rem;
+  border: 1px solid var(--white);
+  padding: 0.3rem;
   color: var(--gray-2);
 
   @media only screen and (min-width: ${breakpoint.medium}px) {
