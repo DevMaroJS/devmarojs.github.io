@@ -29,8 +29,11 @@ export const Home: React.FC = () => {
         <div className="currently-container">
           <img src="" alt="" />
           <Card width="70%">
-            <span className="square" /> Currently working on{' '}
-            <span className="current-project">Portfolio</span>
+            <span className="square" />
+            <span>
+              Currently working on{' '}
+              <span className="current-project">Portfolio</span>
+            </span>
           </Card>
         </div>
       </FlexLayout>
