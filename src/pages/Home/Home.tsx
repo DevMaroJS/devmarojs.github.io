@@ -1,6 +1,7 @@
 import { Button, Card, FlexLayout } from '@components';
 import { ColorZone, Line, StyledHome } from './Home.styled';
 import { Link } from 'react-router-dom';
+import PortfolioPreview from '@assets/default-featured.png';
 
 export const Home: React.FC = () => {
   return (
@@ -79,7 +80,7 @@ export const Home: React.FC = () => {
             <h2>
               <ColorZone>#</ColorZone>projects
             </h2>
-            <Line percentage={65} mobilePercentage={45} />
+            <Line percentage={65} mobilePercentage={25} />
           </FlexLayout>
           <Link className="view-all-link" to="/projects">
             view all{' '}
@@ -97,7 +98,7 @@ export const Home: React.FC = () => {
             description="React, Typescript, Styled components."
             bodyAlignment="column"
             alignItems="flex-start"
-            image="/src/assets/default-featured.png"
+            image={PortfolioPreview}
           >
             <h2>Portfolio</h2>
             <span>
