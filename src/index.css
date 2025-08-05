@@ -45,6 +45,11 @@ body {
   min-height: 100vh;
 }
 
+h1,
+h2 {
+  margin: 0;
+}
+
 h1 {
   font-size: 2rem;
   line-height: 1.1;

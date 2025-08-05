@@ -7,6 +7,10 @@ interface Props {
   children?: React.ReactNode | string;
   width?: string;
   height?: string;
+  className?: string;
+  contentAlign?: string;
+  bodyAlignment?: string;
+  alignItems?: string;
 }
 
 export const Card: React.FC<Props> = ({
@@ -15,12 +19,23 @@ export const Card: React.FC<Props> = ({
   children,
   width,
   height,
+  contentAlign,
+  bodyAlignment,
+  alignItems,
+  className = '',
 }) => {
   return (
-    <StyledCard width={width} height={height}>
+    <StyledCard
+      width={width}
+      height={height}
+      className={className}
+      contentAlign={contentAlign}
+      bodyAlignment={bodyAlignment}
+      alignItems={alignItems}
+    >
       {image && <img src={image} />}
-      {description && <div>{description}</div>}
-      {children}
+      {description && <div className="description">{description}</div>}
+      <div className="body">{children}</div>
     </StyledCard>
   );
 };

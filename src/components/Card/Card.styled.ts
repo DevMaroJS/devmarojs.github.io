@@ -4,15 +4,44 @@ import styled from "styled-components";
 export const StyledCard = styled.div<{
   width?: string,
   height?: string
+  contentAlign?: string;
+  bodyAlignment?: string;
+  alignItems?: string;
 }>`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: ${({ contentAlign }) => contentAlign || 'center'};
+
   gap: 0.5rem;
-  width: 100%;
+  width: ${({ width }) => width || '100%'};
   height: ${({ height }) => height || 'auto'};
   border: 1px solid var(--white);
-  padding: 0.3rem;
   color: var(--gray-2);
+
+  img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+    &:hover {
+      transform: scale(1.01);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  .description{
+    width: -webkit-fill-available;
+    padding: .5rem;
+    border-bottom: 1px solid var(--white);
+    word-break: break-word;
+  }
+
+  .body{
+    display: flex;
+    align-items: ${({ alignItems }) => alignItems || 'center'};
+    padding: .5rem;
+    flex-direction: ${({ bodyAlignment }) => bodyAlignment || 'row'};
+  }
 
   @media only screen and (min-width: ${breakpoint.medium}px) {
     width: ${({ width }) => width || 'auto'};

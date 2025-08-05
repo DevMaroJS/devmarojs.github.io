@@ -6,13 +6,23 @@ interface Props {
   variant: 'primary' | 'secondary';
   children?: React.ReactNode | string;
   link?: string;
+  target?: string;
 }
 
-export const Button: React.FC<Props> = ({ variant, children, link }) => {
+export const Button: React.FC<Props> = ({
+  variant,
+  children,
+  link,
+  target = '_self',
+}) => {
   const navigate = useNavigate();
   const handleOnClick = () => {
+    if (target === '_blank') {
+      window.open(link, '_blank');
+      return;
+    }
     if (link) {
-      navigate(link);
+      navigate(link, {});
     }
   };
   return (
