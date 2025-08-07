@@ -2,6 +2,7 @@ import type React from 'react';
 import { StyledCard } from './Card.styled';
 
 interface Props {
+  title?: string;
   image?: string;
   description?: string;
   children?: React.ReactNode | string;
@@ -14,6 +15,7 @@ interface Props {
 }
 
 export const Card: React.FC<Props> = ({
+  title,
   image,
   description,
   children,
@@ -34,8 +36,9 @@ export const Card: React.FC<Props> = ({
       alignItems={alignItems}
     >
       {image && <img src={image} />}
+      {title && <div className="title">{title}</div>}
       {description && <div className="description">{description}</div>}
-      <div className="body">{children}</div>
+      {children && <div className="body">{children}</div>}
     </StyledCard>
   );
 };

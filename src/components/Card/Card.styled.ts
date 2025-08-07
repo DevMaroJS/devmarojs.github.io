@@ -11,16 +11,25 @@ export const StyledCard = styled.div<{
   display: flex;
   flex-direction: column;
   align-items: ${({ contentAlign }) => contentAlign || 'center'};
-
   gap: 0.5rem;
   width: ${({ width }) => width || '100%'};
-  height: ${({ height }) => height || 'auto'};
+  height: ${({ height }) => height || '100%'};
   border: 1px solid var(--white);
   color: var(--gray-2);
-
+  
+  .title{
+    width: -webkit-fill-available;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--white);
+    word-break: break-word;
+    padding: .5rem;
+  }
+  
   img{
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
 
     &:hover {

@@ -64,7 +64,7 @@ export const Home: React.FC = () => {
         </FlexLayout>
       </FlexLayout>
 
-      <FlexLayout direction="column" gap="1rem">
+      <FlexLayout className="projects-container" direction="column" gap="1rem">
         <FlexLayout
           direction="row"
           justifyContent="space-between"
@@ -80,14 +80,14 @@ export const Home: React.FC = () => {
             <h2>
               <ColorZone>#</ColorZone>projects
             </h2>
-            <Line percentage={65} mobilePercentage={25} />
+            <Line percentage={65} mobilePercentage={20} />
           </FlexLayout>
           <Link className="view-all-link" to="/projects">
-            view all{' '}
+            {`view all ~~>`}
           </Link>
         </FlexLayout>
         <FlexLayout
-          className="projects-container"
+          className="projects-card-container"
           direction="row"
           gap="5rem"
           justifyContent="flex-start"
@@ -105,20 +105,25 @@ export const Home: React.FC = () => {
               This is my personal portfolio, built with React, Typescript and
               Styled components.
             </span>
-            <FlexLayout direction="row" gap="1rem" justifyContent="flex-start">
+            <FlexLayout
+              className="buttons-container"
+              direction="row"
+              gap="1rem"
+              justifyContent="flex-start"
+            >
               <Button
                 variant="primary"
                 target="_blank"
                 link="https://devmarojs.github.io/"
               >
-                Live
+                {`Live |>`}
               </Button>
               <Button
                 variant="secondary"
                 target="_blank"
                 link="https://github.com/DevMaroJS/devmarojs.github.io"
               >
-                Repo
+                {`Github <~>`}
               </Button>
             </FlexLayout>
           </Card>
@@ -130,15 +135,115 @@ export const Home: React.FC = () => {
           </Card> */}
         </FlexLayout>
       </FlexLayout>
-      {/* <div>
-        <h2>#skills</h2>
-        <div>
-          <div></div>
-          <div>cards</div>
-        </div>
-      </div>
-      <div>#about-me</div>
-      <div>#contacts</div> */}
+      <FlexLayout className="skills-container" direction="column" gap="1rem">
+        <FlexLayout
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <FlexLayout
+            className="section-title-container"
+            direction="row"
+            gap="1rem"
+            alignItems="center"
+            justifyContent="flex-start"
+          >
+            <h2>
+              <ColorZone>#</ColorZone>skills
+            </h2>
+            <Line percentage={45} mobilePercentage={55} />
+          </FlexLayout>
+        </FlexLayout>
+        <FlexLayout
+          className="skills-card-container"
+          direction="row"
+          gap="1rem"
+          justifyContent="flex-start"
+        >
+          <Card
+            className="skills-card"
+            width="20%"
+            title="Languages"
+            description="Javascript Typescript Python"
+            bodyAlignment="column"
+            alignItems="flex-start"
+          />
+          <Card
+            className="skills-card"
+            width="20%"
+            title="Frameworks"
+            description="ReactJs NextJs Angular Express.js Flask"
+            bodyAlignment="column"
+            alignItems="flex-start"
+          />
+          <Card
+            className="skills-card"
+            width="20%"
+            title="Databases"
+            description="MySql Postgres MongoDB Firebase"
+            bodyAlignment="column"
+            alignItems="flex-start"
+          />
+          <Card
+            className="skills-card"
+            width="20%"
+            title="Tools"
+            description="VSCode Linux Git"
+            bodyAlignment="column"
+            alignItems="flex-start"
+          />
+          <Card
+            className="skills-card"
+            width="20%"
+            title="Others"
+            description="HTML CSS Sass Tailwind MCP REST API "
+            bodyAlignment="column"
+            alignItems="flex-start"
+          />
+        </FlexLayout>
+      </FlexLayout>
+      <FlexLayout className="about-me-container" direction="column" gap="1rem">
+        <FlexLayout
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <FlexLayout
+            className="section-title-container"
+            direction="row"
+            gap="1rem"
+            alignItems="center"
+            justifyContent="flex-start"
+          >
+            <h2>
+              <ColorZone>#</ColorZone>about-me
+            </h2>
+            <Line percentage={55} mobilePercentage={45} />
+          </FlexLayout>
+        </FlexLayout>
+        <FlexLayout
+          className="about-me-text-container"
+          direction="column"
+          gap="1rem"
+          justifyContent="flex-start"
+        >
+          <span>Hello, I'm Yldemaro!</span>
+          <span>
+            Full-Stack Developer with 8+ years of experience building and
+            delivering high-quality, scalable web applications. Skilled in
+            JavaScript and TypeScript across both front-end and back-end
+            ecosystems, including frameworks and libraries such as Angular,
+            ReactJS, Next.js, ExpressJS, NestJS, and Serverless architectures.
+          </span>
+          <span>
+            Proficient in styling technologies (SCSS, SASS, LESS, Styled
+            Components) and experienced with relational and NoSQL databases like
+            MySQL, PostgreSQL, MongoDB, and Firebase. A passionate lifelong
+            learner who thrives on exploring emerging technologies and staying
+            ahead of industry trends to deliver modern, impactful solutions.
+          </span>
+        </FlexLayout>
+      </FlexLayout>
     </StyledHome>
   );
 };
